@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">approve</string>
+    <string-array name="users">
+        <item>Student</item>
+        <item>Warden</item>
+        <item>Security Official</item>
+    </string-array>
+</resources>

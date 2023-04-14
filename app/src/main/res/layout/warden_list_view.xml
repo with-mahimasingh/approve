@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/wardenListProfilePhotoImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bit" />
+
+    <TextView
+        android:id="@+id/wardenListNameTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:paddingLeft="3dp"
+        android:text="Name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/wardenListProfilePhotoImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wardenListDesignationTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:paddingLeft="3dp"
+        android:text="(Designation)"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/wardenListProfilePhotoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/wardenListNameTextView" />
+
+    <TextView
+        android:id="@+id/wardenListMailTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="3dp"
+        android:text="Email: "
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintStart_toEndOf="@+id/wardenListProfilePhotoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/wardenListDesignationTextView" />
+
+    <TextView
+        android:id="@+id/wardenListCallTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="3dp"
+        android:text="Phone: "
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_blue_light"
+        app:layout_constraintStart_toEndOf="@+id/wardenListProfilePhotoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/wardenListMailTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

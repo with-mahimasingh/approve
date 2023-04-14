@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logInLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbg"
+    style="?android:borderlessButtonStyle"
+    tools:context=".general.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:src="@drawable/bit_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/alata"
+            android:gravity="center"
+            android:text="Log In To Your Account"
+            android:textColor="#033D8B"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/logInEmailEditText"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custombutton"
+            android:gravity="center"
+            android:hint="Email Id"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#B2BEB5" />
+
+        <EditText
+            android:id="@+id/logInPasswordEditText"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/custombutton"
+            android:gravity="center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:shadowRadius="5"
+            android:textColorHint="#B2BEB5" />
+        <!--    <CheckBox-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="Keep me Signed in "-->
+        <!--        android:textColor="#B2BEB5"-->
+        <!--        android:hint="#B2BEB5"-->
+        <!--        android:layout_marginTop="15dp"-->
+        <!--        android:buttonTint="#B2BEB5"-->
+        <!--        />-->
+        <ImageButton
+            android:id="@+id/logInButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/custombutton2"
+            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:tint="@color/white" />
+
+        <!--    <TextView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="Forget Password"-->
+        <!--        android:textSize="18dp"-->
+        <!--        android:layout_marginTop="15dp"-->
+        <!--        android:textColor="#B2BEB5"-->
+        <!--        />-->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
