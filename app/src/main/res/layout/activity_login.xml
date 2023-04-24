@@ -58,15 +58,17 @@
             android:inputType="textPassword"
             android:shadowRadius="5"
             android:textColorHint="#B2BEB5" />
-        <!--    <CheckBox-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:text="Keep me Signed in "-->
-        <!--        android:textColor="#B2BEB5"-->
-        <!--        android:hint="#B2BEB5"-->
-        <!--        android:layout_marginTop="15dp"-->
-        <!--        android:buttonTint="#B2BEB5"-->
-        <!--        />-->
+
+        <TextView
+            android:id="@+id/txtVwForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:text="Forgotten Password?"
+            android:textColor="#033D8B"
+            android:textSize="15sp"
+            android:layout_marginLeft="63dp" />
+
         <ImageButton
             android:id="@+id/logInButton"
             android:layout_width="50dp"

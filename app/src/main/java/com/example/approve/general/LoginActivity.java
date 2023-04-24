@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.approve.R;
@@ -35,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     String logInEmail, logInPassword;
     FirebaseDatabase database;
     String userType = "";
+    TextView tvForgotPwd;
 
     public void logInUser(String email, String password) {
         auth.signInWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
@@ -110,17 +112,26 @@ public class LoginActivity extends AppCompatActivity {
         logInButton = (ImageButton) findViewById(R.id.logInButton);
         logInEmailEditText = (EditText) findViewById(R.id.logInEmailEditText);
         logInPasswordEditText = (EditText) findViewById(R.id.logInPasswordEditText);
+        tvForgotPwd = (TextView) findViewById(R.id.txtVwForgetPassword);
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
-        if(TextUtils.isEmpty(logInEmail) || TextUtils.isEmpty(logInPassword))  {
-            Toast.makeText(LoginActivity.this, "Empty Credentials!", Toast.LENGTH_SHORT).show();
-        }
+
         logInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(TextUtils.isEmpty(logInEmail) || TextUtils.isEmpty(logInPassword))  {
+                    Toast.makeText(LoginActivity.this, "Empty Credentials!", Toast.LENGTH_SHORT).show();
+                }
                 logInEmail = logInEmailEditText.getText().toString();
                 logInPassword = logInPasswordEditText.getText().toString();
                 logInUser(logInEmail, logInPassword);
+            }
+        });
+        tvForgotPwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(LoginActivity.this, ForgottenPasswordActivity.class);
+                startActivity(myIntent);
             }
         });
     }
